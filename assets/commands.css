@@ -1,0 +1,8 @@
+.command {
+  color: var(--green)
+}
+
+.file {
+  color: var(--purple)
+}
+
