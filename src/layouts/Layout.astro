@@ -1,0 +1,53 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<header class="flex align-center justify-around mt-20 text-white">
+			<div class="w-20 flex align-center justify-around">
+				<a href="" target="_blank" rel="noopener noreferrer"><img src="/github.svg" alt="Github"></a>
+				<a href="" target="_blank" rel="noopener noreferrer"><img src="/linkedin.svg" alt="Github"></a>
+			</div>
+
+			<div>
+				<a class="w-40 flex align-center justify-around" href="mailto:felipebruckmann@hotmail.com.br"><img src="/mail.svg" alt="Github">SEND A E-MAIL</a>
+			</div>
+		</header>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap');
+
+	:root {
+		--black: #292929;
+		--dark-grey: #4D4D4D;
+		--light-grey: #808080;
+		--white: #FFFFFF;
+	}
+	html {
+		box-sizing: border-box;
+		margin: 0;
+		position: relative;
+		font-weight: normal;
+		font-family: 'Prompt', sans-serif;
+	}
+
+	body {
+		background-color: var(--black);
+	}
+</style>
