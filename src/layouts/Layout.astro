@@ -1,6 +1,6 @@
 ---
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -8,46 +8,67 @@ const { title } = Astro.props;
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<header class="flex align-center justify-around mt-20 text-white">
-			<div class="w-20 flex align-center justify-around">
-				<a href="" target="_blank" rel="noopener noreferrer"><img src="/github.svg" alt="Github"></a>
-				<a href="" target="_blank" rel="noopener noreferrer"><img src="/linkedin.svg" alt="Github"></a>
-			</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="h-full">
+    <header class="align-center mt-20 flex justify-around text-white">
+      <div class="align-center flex w-20 justify-around">
+        <a
+          href="https://github.com/bruckmann"
+          target="_blank"
+          rel="noopener noreferrer"><img src="/github.svg" alt="Github" /></a
+        >
+        <a
+          href="https://linkedin.com/in/felipefloress"
+          target="_blank"
+          rel="noopener noreferrer"><img src="/linkedin.svg" alt="Github" /></a
+        >
+      </div>
 
-			<div>
-				<a class="w-40 flex align-center justify-around" href="mailto:felipebruckmann@hotmail.com.br"><img src="/mail.svg" alt="Github">SEND A E-MAIL</a>
-			</div>
-		</header>
-		<slot />
-	</body>
+      <div>
+        <a
+          class="align-center flex w-40 justify-around"
+          href="mailto:felipebruckmann@hotmail.com.br"
+          ><img src="/mail.svg" alt="Github" />SEND AN E-MAIL</a
+        >
+      </div>
+    </header>
+    <slot />
+
+    <footer
+      class="fixed bottom-0 left-0 z-20 w-full p-4 shadow md:flex md:items-center md:justify-center md:p-6"
+    >
+      <span class="text-sm font-thin text-white"
+        >COPYRIGHT © 2023 Felipe Bruckmann.</span
+      >
+    </footer>
+  </body>
 </html>
 
 <style is:global>
-	@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Prompt:wght@200;400;600&display=swap");
+  :root {
+    --black: #292929;
+    --dark-grey: #4d4d4d;
+    --light-grey: #808080;
+    --white: #ffffff;
+  }
+  html {
+		height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    position: relative;
+    font-weight: normal;
+    font-family: "Prompt", sans-serif;
+    overflow: hidden;
+  }
 
-	:root {
-		--black: #292929;
-		--dark-grey: #4D4D4D;
-		--light-grey: #808080;
-		--white: #FFFFFF;
-	}
-	html {
-		box-sizing: border-box;
-		margin: 0;
-		position: relative;
-		font-weight: normal;
-		font-family: 'Prompt', sans-serif;
-	}
-
-	body {
-		background-color: var(--black);
-	}
+  body {
+    background-color: var(--black);
+  }
 </style>

@@ -1,9 +1,25 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Bruckmann.io">
-	<main>
-
-	</main>
+  <main class="md:container md:mx-auto flex flex-col justify-around items-center h-3/6 mt-10">
+      <img
+        src="https://avatars.githubusercontent.com/u/13594618?v=4"
+        alt="Felipe Bruckmann"
+        class="w-1/6"
+      />
+      <div class="flex flex-col items-center justify-around h-2/6">
+        <div class="flex flex-col items-center justify-around h-2/6">
+          <p class="text-light-grey text-2xl font-thin">SOFTWARE ENGINEER</p>
+          <h1 class="text-white text-5xl font-bold">FELIPE BRUCKMANN</h1>
+        </div>
+        <nav class="text-light-grey font-thin w-full flex justify-around">
+          <button>EXPERIENCE</button>
+          <button>SKILLS</button>
+          <button>PROJECTS</button>
+          <button>ABOUT</button>
+        </nav>
+      </div>
+  </main>
 </Layout>
