@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import LinkButton from "../components/LinkButton.astro";
 ---
 
 <Layout title="Bruckmann.io">
@@ -14,11 +15,11 @@ import Layout from "../layouts/Layout.astro";
           <p class="text-light-grey text-2xl font-thin">SOFTWARE ENGINEER</p>
           <h1 class="text-white text-5xl font-bold">FELIPE BRUCKMANN</h1>
         </div>
-        <nav class="text-light-grey font-thin w-full flex justify-around">
-          <button>EXPERIENCE</button>
-          <button>SKILLS</button>
-          <button>PROJECTS</button>
-          <button>ABOUT</button>
+        <nav class="w-full flex justify-around">
+          <LinkButton text="EXPERIENCE" href="http://localhost:3000/experience"/>
+          <LinkButton text="SKILLS" href="http://localhost:3000/experience"/>
+          <LinkButton text="PROJECTS" href="http://localhost:3000/experience"/>
+          <LinkButton text="ABOUT" href="http://localhost:3000/experience"/>
         </nav>
       </div>
   </main>

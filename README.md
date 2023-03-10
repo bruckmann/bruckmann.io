@@ -6,3 +6,7 @@
 - [ ] Let the footer responsive
 - [ ] Make the buttons from home navbar
 - [ ] Make the about me section 100% responsive
+- [ ] Implement theme changer
+- [ ] Implement multi-language
+- [ ] Create the 404 page
+- [ ] Add router to project
